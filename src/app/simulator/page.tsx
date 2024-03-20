@@ -27,6 +27,10 @@ import { UnityControlSinals } from "@/types/UnityControlSinals";
 import { execBeq } from "@/utils/toExec/execBeq";
 import { execBne } from "@/utils/toExec/execBne";
 
+interface FunctionSrc {
+  [key: string]: { type: string; src: any }; // Index signature
+}
+
 export default function Simulator() {
   
   const [binaryInstructions, setBinaryInstrucions] = useState('')
@@ -52,7 +56,7 @@ export default function Simulator() {
 
   const [targetFunction, setTargetFunction] = useState('')
 
-  const [functionSrc, setFunctionSrc] = useState({
+  const [functionSrc, setFunctionSrc] = useState<FunctionSrc>({
     add:{type:'R', src: r_type_flow.src},
     sub: {type:'R', src: r_type_flow.src},
     and:{type:'R', src: r_type_flow.src},
