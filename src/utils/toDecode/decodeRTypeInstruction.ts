@@ -4,7 +4,7 @@ import { func3, func7, rd, rs1, rs2 } from "@/types/InstructionComponetsTypes";
 
 export const decodeRTypeInstruction = (riscVInstrucion:string) : string => {
 
-  const funct3 = riscVInstrucion.substring(riscVInstrucion.length - 15, riscVInstrucion.length - 12) as func3
+  const funct3 = riscVInstrucion.substring(riscVInstrucion.length - 15, riscVInstrucion.length - 12) as Function3
 
   const str_rs1 = riscVInstrucion.substring(12, 17) as rs1
   const str_rs2 = riscVInstrucion.substring(7, 12) as rs2
@@ -15,7 +15,7 @@ export const decodeRTypeInstruction = (riscVInstrucion:string) : string => {
   const int_rd = parseInt(str_rd, 2);            
   switch (funct3) {
       case Function3.ADD_SUB:
-          const funct7 = riscVInstrucion.substring(0, 7) as func7
+          const funct7 = riscVInstrucion.substring(0, 7) as Function7
           if (funct7 === Function7.ADD) {
               return(`add x${int_rd}, x${int_rs1}, x${int_rs2}`);
           } else if (funct7 === Function7.SUB) {

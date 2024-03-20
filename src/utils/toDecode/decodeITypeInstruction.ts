@@ -3,7 +3,7 @@ import { func3, imm, rd, rs1 } from "@/types/InstructionComponetsTypes";
 import { expandImmTo32Bits } from "../expandImmTo32Bits";
 
 export const decodeITypeInstruction = (riscVInstrucion:string) : string =>  {
-  const funct3 = riscVInstrucion.substring(riscVInstrucion.length - 15, riscVInstrucion.length - 12) as func3
+  const funct3 = riscVInstrucion.substring(riscVInstrucion.length - 15, riscVInstrucion.length - 12) as Function3
   
   const str_imm = riscVInstrucion.substring(0, 12) 
   const expandedImm = expandImmTo32Bits(str_imm) as imm

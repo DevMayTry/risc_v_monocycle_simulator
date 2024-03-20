@@ -4,7 +4,7 @@ import { expandImmTo32Bits } from "../expandImmTo32Bits";
 
 export const decodeSBTypeInstruction = (riscVInstrucion:string) : string => {
 
-  const funct3 = riscVInstrucion.substring(riscVInstrucion.length - 15, riscVInstrucion.length - 12) as func3
+  const funct3 = riscVInstrucion.substring(riscVInstrucion.length - 15, riscVInstrucion.length - 12) as Function3
 
   const str_imm_upper = riscVInstrucion.substring(0, 7)
   const str_imm_lower = riscVInstrucion.substring(20, 25)
