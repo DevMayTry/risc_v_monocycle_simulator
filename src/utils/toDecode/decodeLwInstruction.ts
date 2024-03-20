@@ -1,7 +1,7 @@
 import { imm, rd, rs1 } from "@/types/InstructionComponetsTypes";
 import { expandImmTo32Bits } from "../expandImmTo32Bits";
 
-export const decodeLwInstruction = (riscVInstrucion:string) : string =>  {
+export const decodeLWInstruction = (riscVInstrucion:string) : string =>  {
   const str_imm = riscVInstrucion.substring(0, 12)
   const expandedImm = expandImmTo32Bits(str_imm) as imm
 
