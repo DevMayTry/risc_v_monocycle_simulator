@@ -1,7 +1,7 @@
 import { OpCode } from "@/enums/OpCode";
 import { decodeRTypeInstruction } from "./decodeRTypeInstruction";
 import { decodeITypeInstruction } from "./decodeITypeInstruction";
-import { decodeLwInstruction } from "./decodeLWInstruction";
+import { decodeLWInstruction } from "./decodeLWInstruction";
 import { decodeSBTypeInstruction } from "./decodeSBTypeInstruction";
 import { decodeSTypeInstruction } from "./decodeSTypeInstruction";
 
@@ -19,7 +19,7 @@ export const decodeInstruction = (riscVInstrucion:string): string => {
         case OpCode.LOAD:
             // Lw Instruction
             console.log('lw')
-            return decodeLwInstruction(riscVInstrucion)
+            return decodeLWInstruction(riscVInstrucion)
         case OpCode.STORE:
             return decodeSTypeInstruction(riscVInstrucion);
         case OpCode.BRANCH:
