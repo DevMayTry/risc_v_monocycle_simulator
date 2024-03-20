@@ -15,12 +15,12 @@ export default function Home() {
 
         <div>
           <h1 className="text-center text-2xl font-bold"> Organização e Arquitetura de Computadores</h1>
-          <p className="text-center text-xl"> Simulador de Arquitetura RiscV Monociclo</p>
+          <p className="text-center text-xl">Simulador de Arquitetura RiscV Monociclo</p>
         </div>
 
         <div>
           <h2 className="text-center text-xl font-bold">Professora:</h2>
-          <p className="text-center"> Simulador de Arquitetura RiscV Monociclo</p>
+          <p className="text-center">Camile Frazao Bordini</p>
         </div>
 
         <div>
