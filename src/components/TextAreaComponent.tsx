@@ -13,13 +13,13 @@ export const InputTextArea = ({title, placeholder, rows, onChange, value}: Input
 		<div className="flex-col justify-center items-center w-full h-full p-5">
 			<label
 				htmlFor="message"
-				className="h-10 text-sm font-medium text-gray-900 dark:text-white"
+				className="h-10 font-bold "
 			>
 				{title}
 			</label>
 			<textarea
 				rows={rows}
-				className="p-2.5 h-5/6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+				className="p-2.5 h-5/6 w-full  text-black bg-purple-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 				placeholder={placeholder}
 				onChange={onChange}
 				value={value}

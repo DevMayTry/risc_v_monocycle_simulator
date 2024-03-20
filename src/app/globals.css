@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.scrollbar-thin-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar-thin-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+}
+
+.scrollbar-thin-scroll::-webkit-scrollbar-thumb {
+  background: #6b46c1; /* Purple color */
+}
+
+.scrollbar-thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: #553c9a; /* Darker purple color on hover */
+}

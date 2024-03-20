@@ -1,14 +1,14 @@
-import { Function3 } from "@/enums/Function3";
-import { Function7 } from "@/enums/Function7";
+import { imm, rd, rs1 } from "@/types/InstructionComponetsTypes";
+import { expandImmTo32Bits } from "../expandImmTo32Bits";
 
 export const decodeLwInstruction = (riscVInstrucion:string) : string =>  {
-  const str_imm = riscVInstrucion.substring(0, 12) as Function7
-  const str_rs1 = riscVInstrucion.substring(12, 17) as Function7
-  const str_rd = riscVInstrucion.substring(20, 25) as Function7
+  const str_imm = riscVInstrucion.substring(0, 12)
+  const expandedImm = expandImmTo32Bits(str_imm) as imm
 
-  console.log(str_imm)
-  
-  const int_imm = parseInt(str_imm, 2);
+  const str_rs1 = riscVInstrucion.substring(12, 17) as rs1
+  const str_rd = riscVInstrucion.substring(20, 25) as rd
+
+  const int_imm = ~~parseInt(`${expandedImm}`, 2);
   const int_rs1 = parseInt(str_rs1, 2);
   const int_rd = parseInt(str_rd, 2);            
   
