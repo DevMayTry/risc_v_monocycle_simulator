@@ -262,8 +262,8 @@ export default function Simulator() {
             </div>
         </div>
         <div id="PC" className="flex flex-col h-[10%] font-bold w-full w-full  items-center justify-center bg-purple-200 hover:bg-purple-400 border-2 border-b-0 border-black">
-            <label className="w-20 text-center">{`PC:`}</label>
-            <input type={"text"} className="w-20 text-center" disabled value={pc}/>
+            <label className="w-20 text-black text-center">{`PC:`}</label>
+            <input type={"text"} className="w-20 text-black text-center" disabled value={pc}/>
         </div>         
         <div id="MemInstructions" className="flex h-[23%] w-full w-full  items-center justify-center bg-purple-600 hover:bg-purple-700 text-white  border-2 border-b-0 border-black">
           <div id="MemInstructionsContent" className="h-full w-full grid grid-cols-1 gap-2 p-2 overflow-auto scrollbar-thin-scroll">
@@ -292,8 +292,8 @@ export default function Simulator() {
           <div id="RegisContent" className="w-full h-full grid grid-cols-2 gap-2 text-center p-2 overflow-auto scrollbar-thin-scroll">
                   {regis.map((item,index)=>(
                     <div key={`regis-${index}`} className="flex flex-col h-full w-full items-center justify-center ">
-                      <label className="w-20 font-bold">{`Reg ${index}:`}</label>
-                      <input type={"text"} ref={(el) => (refsRegisArray.current[index] = el)} className="w-20 text-center rounded-md" onChange={(event)=>{handleRegisInputChange(event,index)}} value={item}/>
+                      <label className="w-20 font-bold text-black">{`Reg ${index}:`}</label>
+                      <input type={"text"} ref={(el) => (refsRegisArray.current[index] = el)} className="w-20 text-black text-center rounded-md" onChange={(event)=>{handleRegisInputChange(event,index)}} value={item}/>
                     </div>
                   ))}
                 </div>
@@ -313,14 +313,14 @@ export default function Simulator() {
                   <div id="ControlUnity" className="w-full grid grid-cols-3 gap-2  p-2">
                     {Object.entries(controlUnity).map(([key,value], index)=>(
                       <div key={index} className="flex flex-col h-full w-full items-center justify-center">
-                        <label className="w-full text-center font-bold">{`${key}:`}</label>
-                        <input type={"text"} className="w-full text-center rounded-md" disabled value={value}/>
+                        <label className="w-full text-center font-bold text-black">{`${key}:`}</label>
+                        <input type={"text"} className="w-full text-center rounded-md text-black" disabled value={value}/>
                       </div>         
                     ))}
                     {targetFunction == 'bne' ?
                       <div key={'bne'} className="flex flex-col h-full w-full items-center justify-center border-2 border-dashed border-yellow-600">
-                        <label className="w-full text-center font-bold ">{`NotEquals:`}</label>
-                        <input type={"text"} className="w-full text-center rounded-md" disabled value={1}/>
+                        <label className="w-full text-center font-bold text-black ">{`NotEquals:`}</label>
+                        <input type={"text"} className="w-full text-center rounded-md text-black" disabled value={1}/>
                       </div> 
                       :
                       <></>

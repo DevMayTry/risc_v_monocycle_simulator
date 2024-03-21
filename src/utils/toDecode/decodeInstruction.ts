@@ -7,17 +7,16 @@ import { decodeSTypeInstruction } from "./decodeSTypeInstruction";
 
 
 export const decodeInstruction = (riscVInstrucion:string): string => {
-
+    
+    console.log(`INSTRUÇÃO BINÁRIA: ${riscVInstrucion}`)
     const opcode = riscVInstrucion.slice(-7) as OpCode
+    console.log(`OPCODE: ${opcode}`)
     switch (opcode) {
         case OpCode.R:
-            // R-Type instructions
             return decodeRTypeInstruction(riscVInstrucion)
         case OpCode.IMM:
-            // I-Type instructions
             return decodeITypeInstruction(riscVInstrucion)
         case OpCode.LOAD:
-            // Lw Instruction
             console.log('lw')
             return decodeLWInstruction(riscVInstrucion)
         case OpCode.STORE:
