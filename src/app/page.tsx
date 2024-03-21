@@ -1,17 +1,12 @@
-"use client";
-import { useRouter } from '../../node_modules/next/navigation';
+import Image from '../../node_modules/next/image';
+import Link from '../../node_modules/next/link';
 import logo from '../assets/unioeste.png'
 
 export default function Home() {
-  const router = useRouter();
-
-  const navigateToSimulatorPage = () => {
-    router.push('/simulator');
-  };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-16 pb-16 bg-white">
-        <img src={logo.src}  className="h-[180px] w-[350px]" alt="logo" />
+        <Image src={logo.src} alt="logo unioeste" height={180} width={350} />
 
         <div>
           <h1 className="text-center text-2xl font-bold"> Organização e Arquitetura de Computadores</h1>
@@ -30,11 +25,9 @@ export default function Home() {
 
         </div>
 
-        <button 
-          type={"button"} 
-          className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out"
-          onClick={navigateToSimulatorPage}
-        > Abrir Simulador</button>
+          <Link href={`/simulator`}           className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out"
+>{`Abrir Simulador`}</Link>
+
     </main>
   );
 }

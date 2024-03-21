@@ -254,8 +254,8 @@ export default function Simulator() {
   },[binaryInstructions])
 
   return (
-    <main className="flex h-screen justify-center align-center text-lg bg-white">
-      <div id="Arq" className="flex h-screen w-2/6 flex-col justify-center ml-2 ">
+    <main className="flex flex-col lg:flex-row  h-screen justify-center align-center text-lg bg-white">
+      <div id="Arq" className="flex h-screen w-11/12 lg:w-2/6  flex-col justify-center ml-2 ">
         <div id="RiscFiveInstructions" className="flex h-[17%] w-full rounded-t-2xl bg-purple-600 hover:bg-purple-700 text-white border-2 border-b-0 border-black">
             <div id="TextArea" className="flex h-full w-full items-center justify-center rounded-t-xl" >
               <InputTextArea title={'RiscV Instructions:'} placeholder={'Paste here'} rows={4} onChange={handleTextAreaInputChange} value={binaryInstructions}/>
