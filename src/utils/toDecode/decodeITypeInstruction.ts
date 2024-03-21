@@ -24,9 +24,7 @@ export const decodeITypeInstruction = (riscVInstrucion:string) : string =>  {
   switch (funct3) {
       case Function3.ADD_SUB:
           return(`addi x${int_rd}, x${int_rs1}, ${int_imm}`);
-          break;
       default:
           return("Unknown I-Type instruction");
-          break;
   } 
 }
