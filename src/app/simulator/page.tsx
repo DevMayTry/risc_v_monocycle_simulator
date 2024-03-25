@@ -210,7 +210,7 @@ export default function Simulator() {
       break;        
       case 'beq':
         setTargetFunction('beq')
-        const pcToSetBeqCase = pc+(execBeq(functionElements))
+        const pcToSetBeqCase = pc+(execBeq(functionElements,regis))
         setPc(pcToSetBeqCase)
         setControlUnity({
           aluSrc:'0',
@@ -226,7 +226,7 @@ export default function Simulator() {
         break
       case 'bne':
         setTargetFunction('bne')
-        const pcToSetBneCase = pc+(execBne(functionElements))
+        const pcToSetBneCase = pc+(execBne(functionElements,regis))
         setPc(pcToSetBneCase)
         setControlUnity({
           aluSrc:'0',
